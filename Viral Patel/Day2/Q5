@@ -1,0 +1,28 @@
+module q5(y,a,clk);
+output reg [2:0]y;
+
+input [7:0]a;
+input clk;
+
+always @(posedge clk)
+begin
+//NONE <= ~a[7]&~a[6]&~a[5]&~a[4]&~a[3]&~a[2]&~a[1]&~a[0];
+if(a==3'b000)
+	y <= 7'b0000000;
+else if(a==3'b001)
+	y <= 7'b0000001;
+else if(a==3'b010)
+	y <= 7'b0000011;
+else if(a==3'b011)
+	y <= 7'b0000111;
+else if(a==3'b100)
+	y <= 7'b0001111;
+else if(a==3'b101)
+	y <= 7'b0011111;
+else if(a==3'b110)
+	y <= 7'b0111111;
+else if(a==3'b111)
+	y <= 7'b1111111;
+end
+endmodule
+

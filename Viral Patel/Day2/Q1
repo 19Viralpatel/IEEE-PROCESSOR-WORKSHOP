@@ -1,1 +1,6 @@
-
+//PATEL VIRAL TUSHARKUMAR
+module q1(s,a,h,l,e);
+input s,a,h,l;
+output e;
+assign e=(s&~a)|h|(a&l);
+endmodule 

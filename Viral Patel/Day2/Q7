@@ -1,0 +1,18 @@
+module q7 (
+  input wire clk,
+  input wire input_signal,
+  output reg output_signal
+);
+
+  reg previous_state;
+
+  always @(posedge clk) begin
+    if (input_signal && !previous_state)
+      output_signal <= 1'b1;
+    else
+      output_signal <= 1'b0;
+
+    previous_state <= input_signal;
+  end
+
+endmodule
